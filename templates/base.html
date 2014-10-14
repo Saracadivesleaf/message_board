@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head> 
+<title>Django 留言板 {% block title %}{% endblock %}</title> 
+<link rel="stylesheet" href="/static/style.css" type=" text/css"> 
+</head>
+
+<body> 
+	<div class="nav"> 
+		<a href="/">首页</a>  
+		<a href="/post/">发表留言</a>  
+		{% if user.is_authenticated %} 
+			<a href="/user/{{user.username}}/">{{user.username}}</a>
+			<a href="/accounts/password/change/">修改密码</a>  
+			<a href="/accounts/logout/">退出</a>
+		{% else %} 
+			<a href="/accounts/login/?next=/">登录</a> 
+			<a href="/accounts/register/">注册</a>
+		{% endif %} 
+		<a href="/admin/">后台管理</a> 
+	</div> 
+<h4>{% block head %}{% endblock %}</h4>
+{% block content %}
+{% endblock %} 
+</body> 
+
+</html>
+
+

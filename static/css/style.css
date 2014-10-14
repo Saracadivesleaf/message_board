@@ -1,0 +1,10 @@
+div.nav{
+	float:right;
+} 
+table.msglist{
+	border:3solidblack;
+	border-collapse:collapse;
+} 
+table.msglistth,table.msglisttd{
+	border:2solidblack;
+}
